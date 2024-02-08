@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext.tsx";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
-axios.defaults.baseURL = "https://andi-bot-notsahill.onrender.com/api/v1";
+axios.defaults.baseURL = "http://localhost:500/api/v1";
 axios.defaults.withCredentials = true;
 const theme = createTheme({
   typography: {
@@ -27,4 +27,3 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     </AuthProvider>
   </React.StrictMode>
 );
-
