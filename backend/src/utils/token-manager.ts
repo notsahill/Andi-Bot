@@ -22,6 +22,7 @@ export const verifyToken = async (
   return new Promise<void>((resolve, reject) => {
     return jwt.verify(token, process.env.JWT_SECRET, (err, success) => {
       if (err) {
+        console.error(err);
         reject(err.message);
         return res.status(401).json({ message: "Token Expired" });
       } else {
